@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stow — Legal</title>
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --bg: #fff;
+      --bg-nav: #f8f8f8;
+      --border: #e0e0e0;
+      --accent: #2a7d4f;
+      --accent-hover: #1f5e3b;
+      --max-width: 680px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #e8e8e8;
+        --text-secondary: #aaa;
+        --text-muted: #777;
+        --bg: #1a1a1a;
+        --bg-nav: #222;
+        --border: #333;
+        --accent: #4aba7a;
+        --accent-hover: #5dd08d;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    nav {
+      background: var(--bg-nav);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav .inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav .brand {
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
+
+    nav a.nav-link {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    nav a.nav-link.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    nav a.nav-link:hover {
+      color: var(--accent-hover);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .page { display: none; }
+    .page.active { display: block; }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 19px;
+      font-weight: 600;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      letter-spacing: -0.2px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 28px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    ul {
+      margin: 0 0 14px 20px;
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .end-mark {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 48px;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a href="#privacy" class="brand">Stow</a>
+    <a href="#privacy" class="nav-link" data-page="privacy">Privacy Policy</a>
+    <a href="#terms" class="nav-link" data-page="terms">Terms of Service</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ==================== PRIVACY POLICY ==================== -->
+  <div id="privacy" class="page">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Effective April 16, 2026 &middot; Last updated April 16, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>Stow (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;the app&rdquo;) is an iOS envelope budgeting application developed by Koumo. We built Stow on a foundational principle: <strong>your financial data belongs to you and stays on your device.</strong></p>
+    <p>This Privacy Policy explains what information Stow collects (very little), how it is used, and your rights regarding that information.</p>
+
+    <h2>2. What Stow Does Not Collect</h2>
+    <p>We want to start with what we do not do, because this list is longer &mdash; and more important &mdash; than the list of things we collect.</p>
+    <ul>
+      <li><strong>No bank account linking.</strong> Stow never connects to your bank, credit card provider, or any financial institution. All transactions are entered manually by you.</li>
+      <li><strong>No user accounts.</strong> There is no sign-up, no email address, no password, no social login. You open the app and start budgeting.</li>
+      <li><strong>No third-party analytics or tracking SDKs.</strong> We do not embed Google Analytics, Mixpanel, Amplitude, or any similar service.</li>
+      <li><strong>No advertising.</strong> There are no ads in Stow, and no advertising identifiers are collected or shared.</li>
+      <li><strong>No App Tracking Transparency (ATT) prompt.</strong> Because there is nothing to track, Stow never requests permission to track you across other apps or websites.</li>
+      <li><strong>No server infrastructure for user data.</strong> We do not operate servers that receive, store, or process your budget data.</li>
+    </ul>
+
+    <h2>3. Data Stored on Your Device</h2>
+    <p>All of your budgeting data &mdash; envelopes, transactions, budgets, period history, and settings &mdash; is stored locally on your iPhone using Apple&rsquo;s SwiftData framework. This data never leaves your device unless you explicitly choose to export it (see Section 5) or enable iCloud Sync (see Section 4).</p>
+    <p>If you delete the app, your local data is permanently removed from the device.</p>
+
+    <h2>4. iCloud Sync (Optional, Premium Feature)</h2>
+    <p>If you subscribe to Stow Premium and enable iCloud Sync in Settings, your budget data is synced across your Apple devices using Apple&rsquo;s CloudKit framework.</p>
+    <ul>
+      <li>Your data is stored in your personal iCloud account, in a CloudKit private database that only you can access.</li>
+      <li>We (the developer) cannot read, access, or retrieve your synced data. Apple&rsquo;s CloudKit private database architecture does not grant developers access to user data.</li>
+      <li>Sync is off by default. You must explicitly enable it.</li>
+      <li>You can disable sync at any time. To remove iCloud data, use iCloud storage management in iOS Settings.</li>
+    </ul>
+    <p>iCloud Sync is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple&rsquo;s privacy policy</a>.</p>
+
+    <h2>5. Data Export</h2>
+    <p>Stow Premium users can export their data as CSV or PDF files. Export is entirely user-initiated via the iOS share sheet. Exported files are sent wherever you choose (AirDrop, email, Files, etc.). We do not receive a copy of exported data.</p>
+
+    <h2>6. Subscription Management &amp; RevenueCat</h2>
+    <p>Stow offers optional premium subscriptions (monthly, annual, and lifetime) managed through Apple&rsquo;s App Store. To handle subscription validation and entitlements, we use a third-party service called RevenueCat.</p>
+
+    <h3>6.1 What RevenueCat receives</h3>
+    <ul>
+      <li>An anonymous, randomly generated user identifier (not linked to your name, email, or Apple ID).</li>
+      <li>Purchase and subscription events (e.g., started, renewed, cancelled, expired).</li>
+      <li>Basic device metadata (device type, OS version, app version) for subscription diagnostics.</li>
+      <li>Subscription status (active, expired, trial, etc.).</li>
+    </ul>
+
+    <h3>6.2 What RevenueCat does not receive</h3>
+    <ul>
+      <li>Any budget data whatsoever &mdash; no envelopes, transactions, amounts, categories, or financial information of any kind.</li>
+      <li>Your name, email address, or Apple ID.</li>
+      <li>Your location, contacts, photos, or any on-device data.</li>
+    </ul>
+    <p>RevenueCat&rsquo;s privacy practices are governed by their <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</p>
+
+    <h2>7. App Store Connect Analytics</h2>
+    <p>We have access to aggregated, anonymised analytics provided by Apple through App Store Connect (downloads, sessions, retention, crash reports). This data is collected and anonymised by Apple and cannot identify individual users. It is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple&rsquo;s privacy policy</a>.</p>
+
+    <h2>8. Widgets</h2>
+    <p>Stow offers home screen widgets. Widget data is stored locally in a shared App Group container on your device. It is not transmitted to any server.</p>
+
+    <h2>9. Children&rsquo;s Privacy</h2>
+    <p>Stow does not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). Since Stow does not collect personal information from any user, this risk is inherently minimal. If you believe a child has provided personal information through the app, please contact us.</p>
+
+    <h2>10. Data Retention</h2>
+    <p>Your budget data is stored on your device (and optionally in your iCloud account), so you have full control over its retention. Deleting the app removes all local data. To remove iCloud data, manage your iCloud storage through iOS Settings.</p>
+    <p>RevenueCat retains anonymous subscription records in accordance with their own retention policy.</p>
+
+    <h2>11. Your Rights</h2>
+    <p>Depending on your jurisdiction (GDPR, CCPA, Australian Privacy Act, and similar frameworks), you may have the right to access, correct, delete, or port your personal data.</p>
+    <ul>
+      <li><strong>Access &amp; portability:</strong> Use the CSV or PDF export feature (Premium) to obtain a copy of all your data.</li>
+      <li><strong>Deletion:</strong> Delete the app to remove all local data. Manage iCloud data through iOS Settings.</li>
+      <li><strong>Correction:</strong> Edit any transaction or envelope directly in the app.</li>
+    </ul>
+    <p>For rights related to RevenueCat&rsquo;s processing of anonymous subscription data, contact us and we will coordinate on your behalf.</p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. If we make material changes, we will update the &ldquo;Last Updated&rdquo; date at the top and, where practical, notify you through the app.</p>
+
+    <h2>13. Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:privacy@koumo.com.au">privacy@koumo.com.au</a><br>
+    <strong>Developer:</strong> Koumo</p>
+
+    <p class="end-mark">&mdash; End of Privacy Policy &mdash;</p>
+  </div>
+
+  <!-- ==================== TERMS OF SERVICE ==================== -->
+  <div id="terms" class="page">
+    <h1>Terms of Service</h1>
+    <p class="subtitle">Effective April 16, 2026 &middot; Last updated April 16, 2026</p>
+
+    <h2>1. Agreement to Terms</h2>
+    <p>By downloading, installing, or using Stow (&ldquo;the app&rdquo;), you agree to be bound by these Terms of Service (&ldquo;Terms&rdquo;). If you do not agree, do not use the app. Stow is developed and operated by Koumo (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;).</p>
+
+    <h2>2. Description of Service</h2>
+    <p>Stow is an iOS envelope budgeting application that allows you to allocate income across spending categories (&ldquo;envelopes&rdquo;), log transactions, and track your budget. All data is stored locally on your device. Stow is a personal finance <em>tool</em>, not a financial advisory service (see Section 9).</p>
+
+    <h2>3. Eligibility</h2>
+    <p>You must be at least 13 years old (or the minimum age required in your jurisdiction) to use Stow. By using the app, you represent that you meet this requirement.</p>
+
+    <h2>4. Free Tier &amp; Premium Subscriptions</h2>
+
+    <h3>4.1 Free tier</h3>
+    <p>Stow is free to use with core budgeting functionality, subject to certain feature limits (e.g., up to 5 envelopes, monthly period type only, limited history access). The free tier is a fully functional product, not a trial.</p>
+
+    <h3>4.2 Premium subscriptions</h3>
+    <p>Stow Premium unlocks additional features including unlimited envelopes, flexible budget periods, full transaction history, reports, data export, iCloud sync, widgets, and appearance customisation. Premium is available as a monthly subscription, an annual subscription, or a one-time lifetime purchase.</p>
+
+    <h3>4.3 Billing</h3>
+    <p>All purchases are processed by Apple through the App Store. Subscription terms, pricing, renewal, cancellation, and refund policies are governed by Apple&rsquo;s <a href="https://www.apple.com/legal/internet-services/itunes/" target="_blank" rel="noopener">App Store Terms of Service</a>. We do not process payments directly.</p>
+    <ul>
+      <li>Subscriptions auto-renew unless cancelled at least 24 hours before the end of the current billing period.</li>
+      <li>You can manage or cancel subscriptions in your Apple ID account settings.</li>
+      <li>Free trial periods (if offered) convert to a paid subscription at the end of the trial unless cancelled.</li>
+      <li>Refund requests must be directed to Apple.</li>
+    </ul>
+
+    <h3>4.4 Price changes</h3>
+    <p>We may change subscription pricing at any time. Apple will notify you of price increases and require your consent before your next renewal, in accordance with App Store policies.</p>
+
+    <h2>5. Your Data &amp; Responsibilities</h2>
+    <p>You are responsible for the accuracy of the data you enter into Stow. Since all budget data is stored locally on your device (and optionally in your iCloud account), you are responsible for maintaining backups. We are not liable for data loss resulting from device failure, app deletion, or iCloud issues.</p>
+    <p>We strongly recommend enabling iCloud Sync (Premium) or periodically exporting your data for safekeeping.</p>
+
+    <h2>6. Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Reverse-engineer, decompile, or disassemble the app, except to the extent permitted by applicable law.</li>
+      <li>Use the app to engage in any activity that is illegal or violates the rights of others.</li>
+      <li>Attempt to circumvent premium feature restrictions or subscription validation.</li>
+      <li>Redistribute, sublicense, or resell the app or any part of it.</li>
+    </ul>
+
+    <h2>7. Intellectual Property</h2>
+    <p>Stow, including its design, code, icons, and content, is the intellectual property of Koumo and is protected by copyright and other intellectual property laws. Your use of the app grants you a limited, non-exclusive, non-transferable, revocable licence to use the app for personal, non-commercial purposes in accordance with these Terms.</p>
+    <p>Your budget data remains yours. We claim no ownership of the data you enter into the app.</p>
+
+    <h2>8. Third-Party Services</h2>
+    <p>Stow integrates with the following third-party services:</p>
+    <ul>
+      <li><strong>Apple (App Store, iCloud/CloudKit):</strong> Governed by Apple&rsquo;s Terms of Service and Privacy Policy.</li>
+      <li><strong>RevenueCat:</strong> Used for subscription management. Governed by RevenueCat&rsquo;s <a href="https://www.revenuecat.com/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+    </ul>
+    <p>We are not responsible for the practices or availability of these third-party services.</p>
+
+    <h2>9. No Financial Advice</h2>
+    <p><strong>Stow is a budgeting tool, not a financial advisory service.</strong> Nothing in the app constitutes financial advice, investment advice, tax advice, or any other form of professional advice. The app helps you organise your own spending data &mdash; it does not analyse your financial situation, recommend investments, or provide personalised financial guidance. You should consult a qualified financial professional for financial decisions.</p>
+
+    <h2>10. Disclaimers</h2>
+    <p>Stow is provided <strong>&ldquo;as is&rdquo;</strong> and <strong>&ldquo;as available&rdquo;</strong> without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+    <p>We do not warrant that the app will be uninterrupted, error-free, or free of harmful components. We do not warrant the accuracy of any calculations or reports generated by the app &mdash; you should verify important financial figures independently.</p>
+
+    <h2>11. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law (including the Australian Consumer Law), Koumo shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, data, or goodwill, arising out of or in connection with your use of Stow.</p>
+    <p>Our total liability for any claim arising from or related to the app shall not exceed the amount you paid for Stow in the 12 months preceding the claim, or AUD $50, whichever is greater.</p>
+    <p>Nothing in these Terms excludes or limits liability that cannot be excluded or limited under applicable law, including liability for fraud, death, or personal injury caused by negligence, or any rights you have under the Australian Consumer Law that cannot be waived.</p>
+
+    <h2>12. Termination</h2>
+    <p>You may stop using Stow at any time by deleting the app. We may discontinue the app or terminate your access at any time, with or without notice, though we have no practical mechanism to do so since the app runs locally on your device without user accounts.</p>
+    <p>Sections 7, 9, 10, 11, and 13 survive termination.</p>
+
+    <h2>13. Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms are governed by the laws of Australia. Any disputes arising from or related to these Terms or the app shall be subject to the exclusive jurisdiction of the courts of Australia.</p>
+    <p>If you are a consumer in a jurisdiction with mandatory consumer protection laws, nothing in these Terms affects your statutory rights.</p>
+
+    <h2>14. Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. If we make material changes, we will update the &ldquo;Last Updated&rdquo; date at the top of this page and, where practical, notify you through the app. Continued use of the app after changes constitutes acceptance of the updated Terms.</p>
+
+    <h2>15. Severability</h2>
+    <p>If any provision of these Terms is found to be unenforceable, the remaining provisions will continue in full force and effect.</p>
+
+    <h2>16. Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:legal@koumo.com.au">legal@koumo.com.au</a><br>
+    <strong>Developer:</strong> Koumo</p>
+
+    <p class="end-mark">&mdash; End of Terms of Service &mdash;</p>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Koumo. All rights reserved.
+</footer>
+
+<script>
+  function setActivePage() {
+    const hash = window.location.hash.replace('#', '') || 'privacy';
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    const page = document.getElementById(hash);
+    const link = document.querySelector(`.nav-link[data-page="${hash}"]`);
+    if (page) page.classList.add('active');
+    if (link) link.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', setActivePage);
+  setActivePage();
+</script>
+
+</body>
+</html>
