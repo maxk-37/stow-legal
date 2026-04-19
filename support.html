@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stow Support</title>
+  <meta name="description" content="Support and FAQs for Stow, the privacy-first envelope budgeting app for iPhone.">
+  <meta name="robots" content="index,follow">
+  <style>
+    :root {
+      --primary: #2E7D32;
+      --primary-hover: #276B2B;
+      --secondary: #F5C842;
+      --background: #FAFAF5;
+      --surface: #ECEEE8;
+      --on-surface: #1C1C1E;
+      --on-surface-secondary: #6B7280;
+      --border: rgba(0, 0, 0, 0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #43A047;
+        --primary-hover: #388E3C;
+        --secondary: #F5C842;
+        --background: #1C1C1E;
+        --surface: #2C2C2E;
+        --on-surface: #F5F5F0;
+        --on-surface-secondary: #9CA3AF;
+        --border: rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--background);
+      color: var(--on-surface);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      color: var(--on-surface-secondary);
+      font-size: 15px;
+      margin: 2px 0 0;
+    }
+
+    .intro {
+      font-size: 17px;
+      margin: 0 0 40px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 40px 0 16px;
+      letter-spacing: -0.01em;
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 10px;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      min-height: 28px;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: "+";
+      color: var(--primary);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] summary::after { content: "−"; }
+
+    .faq-item .answer {
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 15px;
+    }
+
+    .faq-item .answer p { margin: 0 0 8px; }
+    .faq-item .answer p:last-child { margin-bottom: 0; }
+
+    .faq-item .answer strong {
+      font-weight: 600;
+      color: var(--on-surface);
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border-radius: 12px;
+      padding: 28px 24px;
+      margin: 40px 0 0;
+      text-align: center;
+    }
+
+    .contact-card h2 { margin: 0 0 8px; }
+
+    .contact-card p {
+      color: var(--on-surface-secondary);
+      margin: 0 0 20px;
+      font-size: 15px;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      min-height: 44px;
+      transition: background-color 0.15s ease;
+    }
+
+    .contact-button:hover,
+    .contact-button:focus { background: var(--primary-hover); }
+
+    .contact-button:focus-visible {
+      outline: 3px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--on-surface-secondary);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    footer .dot {
+      margin: 0 8px;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 28px 16px 48px; }
+      h1 { font-size: 24px; }
+      h2 { font-size: 18px; }
+      .logo { width: 44px; height: 44px; font-size: 20px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" aria-hidden="true">S</div>
+      <div>
+        <h1>Stow Support</h1>
+        <p class="tagline">Help, FAQs, and getting in touch</p>
+      </div>
+    </header>
+
+    <p class="intro">
+      Stow is a privacy-first envelope budgeting app for iPhone. All your budget data stays on your device — no accounts, no bank linking, no servers. Below are answers to common questions. If you can't find what you need, email us and we'll get back to you within two business days.
+    </p>
+
+    <h2>Getting started</h2>
+
+    <details class="faq-item">
+      <summary>What is Stow?</summary>
+      <div class="answer">
+        <p>Stow is an envelope budgeting app for iPhone. You divide your money into labelled "envelopes" — like Groceries, Rent, or Fun — and track spending against each one. Stow is designed to be private: your budget data never leaves your device.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I create my first envelope?</summary>
+      <div class="answer">
+        <p>After you finish onboarding, tap the <strong>+</strong> button on your dashboard. Give the envelope a name, allocate an amount, choose an icon and colour, and save. Free users can create up to 5 envelopes.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How does envelope budgeting work?</summary>
+      <div class="answer">
+        <p>At the start of each period (usually a month), you divide your income into envelopes for different spending categories. As you spend, you log transactions against the relevant envelope. When an envelope runs out, that category is done for the period — which makes it easy to see where your money is going and stay on budget.</p>
+      </div>
+    </details>
+
+    <h2>Your data & privacy</h2>
+
+    <details class="faq-item">
+      <summary>Where is my data stored?</summary>
+      <div class="answer">
+        <p>All your budget data — envelopes, transactions, amounts — is stored locally on your iPhone. Nothing about your spending is uploaded to any server. Stow has no account system, and you don't need to sign up to use it.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does my data sync between devices?</summary>
+      <div class="answer">
+        <p>Not in the current version. Each iPhone keeps its own Stow data. Cross-device sync is something we're exploring for a future update.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>What happens if I delete the app or lose my phone?</summary>
+      <div class="answer">
+        <p>Because Stow stores data on-device, uninstalling the app or losing your device will remove your budget data. Premium users can export their data to a CSV file (<strong>Settings → Export</strong>) to keep their own backups.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>Does Stow work offline?</summary>
+      <div class="answer">
+        <p>Yes. All core budgeting features work fully offline. The app only makes a network request for subscription-related operations such as purchases and restores.</p>
+      </div>
+    </details>
+
+    <h2>Premium & subscriptions</h2>
+
+    <details class="faq-item">
+      <summary>What does Premium include?</summary>
+      <div class="answer">
+        <p>Premium unlocks unlimited envelopes, spending reports, CSV export, home-screen widgets, and custom colour themes. Free users keep all core budgeting features and up to 5 envelopes, forever.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I upgrade to Premium?</summary>
+      <div class="answer">
+        <p>Tap any locked feature inside the app, or go to <strong>Settings → Upgrade</strong>. You'll see the available plans there.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I restore my subscription on a new iPhone?</summary>
+      <div class="answer">
+        <p>On the new device, open Stow and go to <strong>Settings → Restore Purchases</strong>. As long as you're signed into the same Apple ID that made the original purchase, your Premium access will be restored. Note: this restores your subscription only — it does not transfer your budget data.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>How do I cancel my subscription?</summary>
+      <div class="answer">
+        <p>Subscription cancellation is handled through iOS, not inside Stow. Open <strong>Settings → [Your Name] → Subscriptions → Stow → Cancel Subscription</strong>. Your Premium access remains active until the end of the current billing period.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>I was charged but don't have Premium access.</summary>
+      <div class="answer">
+        <p>First, try <strong>Settings → Restore Purchases</strong> inside Stow. If that doesn't resolve it, email us with your Apple receipt (you can find it in your Apple ID purchase history) and we'll look into it right away.</p>
+      </div>
+    </details>
+
+    <h2>Bugs & feedback</h2>
+
+    <details class="faq-item">
+      <summary>I found a bug.</summary>
+      <div class="answer">
+        <p>Sorry about that. Email us with a description of what happened, what you expected to happen, and your iPhone model and iOS version. Screenshots help a lot.</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary>I have a feature suggestion.</summary>
+      <div class="answer">
+        <p>We'd love to hear it. Send it to the support email below — we read everything.</p>
+      </div>
+    </details>
+
+    <section class="contact-card" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Still need help?</h2>
+      <p>Email us and we'll reply within two business days.</p>
+      <a class="contact-button" href="mailto:stow.contactus@gmail.com">stow.contactus@gmail.com</a>
+    </section>
+
+    <footer>
+      <a href="https://maxk-37.github.io/stow-legal/#privacy">Privacy Policy</a>
+      <span class="dot" aria-hidden="true">·</span>
+      <span>Last updated 19 April 2026</span>
+    </footer>
+  </div>
+</body>
+</html>
